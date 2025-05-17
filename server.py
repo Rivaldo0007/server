@@ -7,8 +7,9 @@ import struct
 import datetime
 import sys
 
-HOST = "0.0.0.0"
-PORT = 5566
+import os
+HOST = os.environ.get("HOST", "0.0.0.0")
+PORT = int(os.environ.get("PORT", 5566))
 
 
 class PluginHandler:
